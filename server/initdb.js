@@ -1,6 +1,5 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
 const Campaign = require("./models/campaignSchema.js");
 const User = require("./models/userSchema.js");
 const Choice = require("./models/userChoiceSchema.js");
