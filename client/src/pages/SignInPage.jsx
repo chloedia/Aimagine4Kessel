@@ -20,7 +20,9 @@ const SignIn = () => {
 	useEffect(() => {
 		const fetchUserIDs = async () => {
 			try {
-				const response = await fetch("http://localhost:8080/api/users");
+				const response = await fetch(
+					"https://aimagine-kessel.vercel.app/api/users"
+				);
 				const data = await response.json();
 				if (response.ok) {
 					const newsletterIds = data.map((user) => user.newsLetterId);
@@ -45,16 +47,19 @@ const SignIn = () => {
 
 	const handleLogin = async () => {
 		try {
-			const response = await fetch("http://localhost:8080/api/login", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					newsLetterId: selectedNewsLetterId,
-					password: password,
-				}),
-			});
+			const response = await fetch(
+				"https://aimagine-kessel.vercel.app/api/login",
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						newsLetterId: selectedNewsLetterId,
+						password: password,
+					}),
+				}
+			);
 
 			const data = await response.json();
 			if (response.ok) {

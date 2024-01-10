@@ -13,7 +13,7 @@ async function checkTokenValidity() {
 
 	try {
 		const response = await fetch(
-			"http://localhost:8080/api/auth/validate",
+			"https://aimagine-kessel.vercel.app/api/auth/validate",
 			{
 				headers: {
 					Authorization: `Bearer ${token}`,
@@ -86,7 +86,7 @@ export default function VisualSelection() {
 			checkTokenValidity();
 			try {
 				const response = await fetch(
-					"http://localhost:8080/api/campaigns"
+					"https://aimagine-kessel.vercel.app/api/campaigns"
 				);
 				const data = await response.json();
 				if (response.ok) {
@@ -107,7 +107,7 @@ export default function VisualSelection() {
 			if (token) {
 				try {
 					const response = await fetch(
-						"http://localhost:8080/api/current-user",
+						"https://aimagine-kessel.vercel.app/api/current-user",
 						{
 							headers: { Authorization: `Bearer ${token}` },
 						}
@@ -152,14 +152,17 @@ export default function VisualSelection() {
 				for (const [campaignId, visualId] of Object.entries(
 					selections
 				)) {
-					await fetch("http://localhost:8080/api/user-choice", {
-						method: "POST",
-						headers: {
-							"Content-Type": "application/json",
-							Authorization: `Bearer ${token}`,
-						},
-						body: JSON.stringify({ campaignId, visualId }),
-					});
+					await fetch(
+						"https://aimagine-kessel.vercel.app/api/user-choice",
+						{
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+								Authorization: `Bearer ${token}`,
+							},
+							body: JSON.stringify({ campaignId, visualId }),
+						}
+					);
 				}
 
 				navigate("/exit-page");

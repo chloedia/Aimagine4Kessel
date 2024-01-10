@@ -11,7 +11,7 @@ async function checkTokenValidity() {
 
 	try {
 		const response = await fetch(
-			"http://localhost:8080/api/auth/validate",
+			"https://aimagine-kessel.vercel.app/api/auth/validate",
 			{
 				headers: {
 					Authorization: `Bearer ${token}`,
@@ -44,7 +44,7 @@ export default function ExitPage() {
 			if (token) {
 				try {
 					const response = await fetch(
-						"http://localhost:8080/api/current-user",
+						"https://aimagine-kessel.vercel.app/api/current-user",
 						{
 							headers: { Authorization: `Bearer ${token}` },
 						}
