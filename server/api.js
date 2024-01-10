@@ -4,7 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const bcrypt = require("bcryptjs");
+const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const User = require("./models/userSchema");
@@ -76,7 +76,7 @@ app.post("/api/login", async (req, res) => {
 			return res.status(401).json({ error: "Invalid credentials" });
 		}
 		// Compare provided password with the stored hash
-		const isMatch = await bcrypt.compare(password, user.password);
+		const isMatch = await bcryptjs.compare(password, user.password);
 		if (!isMatch) {
 			return res.status(401).json({ error: "Invalid credentials" });
 		}
