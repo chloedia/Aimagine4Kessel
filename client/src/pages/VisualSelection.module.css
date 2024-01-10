@@ -1,0 +1,76 @@
+html,
+body,
+#root {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.visualContainer {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid rgba(56, 57, 61, 0.1);
+	border-radius: 5px;
+	padding: 20px;
+	margin: 30px 0;
+}
+
+.visualContainer.selected {
+	border: 1px solid rgba(56, 57, 61, 1);
+}
+iframe {
+	margin-bottom: 25px;
+	border: 1px solid rgba(56, 57, 61, 0.1);
+	border-radius: 5px;
+}
+.infoWrapper {
+	margin-bottom: 10px;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-top: 0;
+}
+
+label.dim {
+	font-weight: normal;
+}
+
+.buttonWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.buttonWrapper button {
+	padding: 0.5rem 1rem;
+	background-color: white;
+	color: #333;
+	border: 1px solid #333;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.buttonWrapper button:hover {
+	background-color: #333;
+	color: white;
+}
+
+.buttonWrapper .info-container button {
+	padding: 0.7rem 2rem;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.buttonWrapper .form button {
+	padding: 0.7rem 2rem;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}

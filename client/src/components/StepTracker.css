@@ -1,0 +1,39 @@
+.step-tracker {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 10%;
+}
+
+.step {
+	position: relative;
+	padding-left: 20px; /* Adjust the space for the line indicator */
+	display: flex;
+	flex-direction: row-reverse;
+	margin: 5px;
+}
+
+.step-name {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px; /* Space between step name and line */
+}
+
+.step-line {
+	height: 100%;
+	background-color: #ccc; /* Default line color */
+	width: 2px; /* Full width of the container */
+	margin-right: 10px;
+}
+
+.step.current .step-line {
+	background-color: orange; /* Highlight color for current step */
+}
+
+.step.completed {
+	cursor: pointer;
+}
+
+.step.completed .step-line {
+	background-color: #333; /* Color to indicate completed steps */
+}

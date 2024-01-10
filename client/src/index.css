@@ -1,0 +1,174 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#root {
+	height: 100%;
+}
+
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 1000; /* Ensure it's above other content */
+	padding: 1rem 2rem;
+	background-color: #333; /* You can change this color to match your design */
+	color: white;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header .logo {
+	width: 10%;
+}
+
+.content {
+	display: flex;
+	flex-direction: row;
+	background-color: #ffff;
+	height: 95%;
+	padding: 0;
+}
+.form-container {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	max-height: 100vh; /* Maximum height of the viewport */
+	overflow-y: auto; /* Enables vertical scrolling */
+}
+.form {
+	padding: 5% 10%;
+}
+hr {
+	background-color: orange;
+	height: 3px;
+	width: 16px;
+	border: 0;
+	margin-left: 0;
+}
+
+.info-container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	background-color: #ffff;
+	background: linear-gradient(to left, #3e3e3e 0%, #0000 0%, #d9d9d9 90%) left
+		center / 8px 100% no-repeat;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+}
+
+input,
+select {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.75rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 1px solid rgba(56, 57, 61, 0.1);
+	border-radius: 5px;
+}
+.form-elmt {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5rem;
+}
+
+.error-message {
+	color: grey;
+	font-size: 0.8rem;
+	margin-top: 5px;
+}
+.info-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	padding: 4rem;
+}
+
+.info-container img {
+	max-width: 80%; /* Ensure the image is responsive and doesn't overflow its container */
+	height: auto; /* Maintain the aspect ratio of the image */
+	margin-bottom: 1rem; /* Space between the image and the text */
+}
+
+.info-container p {
+	margin-bottom: 1rem; /* Space between the text and the button */
+}
+
+.info-container .notSelected {
+	background-color: #333;
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+.info-container button {
+	padding: 0.7rem 2rem;
+	background-color: #000;
+	color: #fff;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+button:hover:not(.notSelected) {
+	background-color: #000;
+}
+
+.info-container button:hover {
+	background-color: #333; /* Darken button on hover */
+}
+
+.logoutWrapper {
+	position: fixed; /* Fixed position relative to the viewport */
+	bottom: 0; /* Align to the bottom of the viewport */
+	right: 0; /* Align to the left of the viewport */
+	display: flex;
+	align-items: center;
+	justify-content: flex-end; /* Align content to the left */
+	width: 100%; /* Optional, depending on how you want it to stretch */
+	z-index: 1000; /* Ensures it's above most other content */
+}
+.info-container .logoutWrapper img {
+	max-width: 30px;
+	height: auto;
+	margin: 0 5px;
+}
+.info-container .logoutWrapper button {
+	background-color: transparent;
+	color: #333;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	padding: 10px 3px;
+}
