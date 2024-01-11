@@ -17,42 +17,46 @@ const campaignsData = [
 	{
 		id: "netflix",
 		name: "Netflix",
+		logo_url:
+			"https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png",
 		visuals: [
 			{
 				id: "Choice 1",
 				dim: "350 X 130",
-				src: "path-to-visual1.png",
+				src: "/ads/Netflix_style1/index.html",
 			},
 			{
 				id: "Choice 2",
 				dim: "350 X 130",
-				src: "path-to-visual2.png",
+				src: "/ads/Netflix_style2/index.html",
 			},
 			{
 				id: "Choice 3",
 				dim: "350 X 130",
-				src: "path-to-visual3.png",
+				src: "/ads/Netflix_style3/index.html",
 			},
 		],
 	},
 	{
-		id: "renault",
-		name: "Renault",
+		id: "peugeot",
+		name: "Peugeot",
+		logo_url:
+			"https://logodownload.org/wp-content/uploads/2014/09/peugeot-logo-5.png",
 		visuals: [
 			{
 				id: "Choice 1",
 				dim: "350 X 130",
-				src: "path-to-visual1.png",
+				src: "/ads/Peugeot_style1/index.html",
 			},
 			{
 				id: "Choice 2",
 				dim: "350 X 130",
-				src: "path-to-visual2.png",
+				src: "/ads/Peugeot_style2/index.html",
 			},
 			{
 				id: "Choice 3",
 				dim: "350 X 130",
-				src: "path-to-visual3.png",
+				src: "/ads/Peugeot_style3/index.html",
 			},
 		],
 	},
@@ -60,15 +64,15 @@ const campaignsData = [
 
 const usersData = [
 	{
-		newsLetterId: "newsletter1",
+		newsLetterId: "Newsletter 1",
 		password: "kesselAimagine_newsletter1",
 	},
 	{
-		newsLetterId: "newsletter2",
+		newsLetterId: "Newsletter 2",
 		password: "kesselAimagine_newsletter2",
 	},
 	{
-		newsLetterId: "newsletter3",
+		newsLetterId: "Newsletter 3",
 		password: "kesselAimagine_newsletter3",
 	},
 ];

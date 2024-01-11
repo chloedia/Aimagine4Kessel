@@ -1,0 +1,54 @@
+.peugeot-style {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.peugeot-style .div {
+  background-color: #ffffff;
+  width: 580px;
+  height: 757.22px;
+  position: relative;
+}
+
+.peugeot-style .overlap-group {
+  position: absolute;
+  width: 500px;
+  height: 339px;
+  top: 67px;
+  left: 40px;
+}
+
+.peugeot-style .la-PEUGEOT-e {
+  position: absolute;
+  width: 429px;
+  top: 243px;
+  left: 36px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 13.9px;
+  text-align: justify;
+  letter-spacing: 0;
+  line-height: 19.1px;
+}
+
+.peugeot-style .image {
+  width: 500px;
+  height: 291px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  object-fit: cover;
+}
+
+.peugeot-style .img {
+  width: 499px;
+  height: 279px;
+  top: 427px;
+  left: 41px;
+  position: absolute;
+  object-fit: cover;
+}

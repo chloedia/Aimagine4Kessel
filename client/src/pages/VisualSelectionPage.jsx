@@ -65,7 +65,7 @@ function Campaign({ campaign, onSelectVisual, selections, showSelected }) {
 							width="100%"
 						></iframe>
 						<div className={styles.buttonWrapper}>
-							<button>Copy html code</button>
+							<button>Copy HTML Code</button>
 						</div>
 					</div>
 				))}
@@ -175,7 +175,7 @@ export default function VisualSelection() {
 	return (
 		<>
 			<div className="header">
-				<img className="logo" alt="logo" src="/logo.png" />
+				<img className="logo" alt="logo" src="/img/logo.png" />
 				<div className="user">
 					{currentUser ? currentUser.newsLetterId : ""}
 				</div>
@@ -219,6 +219,13 @@ export default function VisualSelection() {
 
 				<div className="info-container">
 					<div>
+						{currentStep < campaigns.length && (
+							<img
+								alt="advertiser logo"
+								src={campaigns[currentStep].logo_url}
+							/>
+						)}
+
 						<h1>Objectif de la campagne</h1>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing

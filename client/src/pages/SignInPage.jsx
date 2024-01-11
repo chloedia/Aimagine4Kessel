@@ -77,7 +77,7 @@ const SignIn = () => {
 	return (
 		<>
 			<div className="header">
-				<img className="logo" alt="logo" src="/logo.png" />
+				<img className="logo" alt="logo" src="/img/logo.png" />
 			</div>
 			<div className="content">
 				<div className="form-container">

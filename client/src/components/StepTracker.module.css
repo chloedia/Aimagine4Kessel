@@ -1,4 +1,4 @@
-.step-tracker {
+.step_tracker {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -13,20 +13,20 @@
 	margin: 5px;
 }
 
-.step-name {
+.step_name {
 	display: block;
 	font-weight: bold;
 	margin-bottom: 5px; /* Space between step name and line */
 }
 
-.step-line {
+.step_line {
 	height: 100%;
 	background-color: #ccc; /* Default line color */
 	width: 2px; /* Full width of the container */
 	margin-right: 10px;
 }
 
-.step.current .step-line {
+.step.current .step_line {
 	background-color: orange; /* Highlight color for current step */
 }
 
@@ -34,6 +34,6 @@
 	cursor: pointer;
 }
 
-.step.completed .step-line {
+.step.completed .step_line {
 	background-color: #333; /* Color to indicate completed steps */
 }

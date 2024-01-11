@@ -1,21 +1,25 @@
 import React from "react";
-import "./StepTracker.css"; // Make sure to create a corresponding CSS file
+import styles from "./StepTracker.module.css"; // Make sure the CSS module file exists and is correctly named
 
 function StepTracker({ steps, currentStep, setCurrentStep }) {
 	return (
-		<div className="step-tracker">
+		<div className={styles.step_tracker}>
 			{steps.map((step, index) => (
 				<div
 					key={step}
-					className={`step ${
-						index === currentStep ? "current" : ""
-					} ${index < currentStep ? "completed" : ""}`}
-					onClick={() => setCurrentStep(index)}
+					className={`${styles.step} ${
+						index === currentStep ? styles.current : ""
+					} ${index < currentStep ? styles.completed : ""}`}
+					onClick={() =>
+						index < currentStep
+							? setCurrentStep(index)
+							: console.log("")
+					}
 				>
-					<span className="step-name">{step}</span>
+					<span className={styles.step_name}>{step}</span>
 					<div
-						className={`step-line ${
-							index < currentStep ? "completed" : ""
+						className={`${styles.step_line} ${
+							index < currentStep ? styles.completed : ""
 						}`}
 					></div>
 				</div>

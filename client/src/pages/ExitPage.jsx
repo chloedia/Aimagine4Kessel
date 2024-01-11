@@ -73,7 +73,7 @@ export default function ExitPage() {
 	return (
 		<>
 			<div className="header">
-				<img className="logo" alt="logo" src="/logo.png" />
+				<img className="logo" alt="logo" src="/img/logo.png" />
 				<div className="user">
 					{currentUser ? currentUser.newsLetterId : ""}
 				</div>

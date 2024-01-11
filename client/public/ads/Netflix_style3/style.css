@@ -1,0 +1,283 @@
+.netflix-style {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.netflix-style .div {
+  background-color: #ffffff;
+  width: 580px;
+  height: 752.53px;
+  position: relative;
+}
+
+.netflix-style .avec-netflix-vous {
+  position: absolute;
+  width: 358px;
+  top: 349px;
+  left: 111px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 11.6px;
+  text-align: justify;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.netflix-style .frame {
+  position: absolute;
+  width: 370px;
+  height: 261px;
+  top: 51px;
+  left: 102px;
+}
+
+.netflix-style .overlap-group {
+  position: relative;
+  height: 261px;
+}
+
+.netflix-style .image {
+  width: 136px;
+  height: 136px;
+  top: 11px;
+  left: 234px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.netflix-style .img {
+  width: 219px;
+  height: 219px;
+  top: 0;
+  left: 109px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.netflix-style .image-2 {
+  width: 219px;
+  height: 219px;
+  top: 42px;
+  left: 0;
+  position: absolute;
+  object-fit: cover;
+}
+
+.netflix-style .image-3 {
+  width: 210px;
+  height: 193px;
+  top: 68px;
+  left: 109px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.netflix-style .group {
+  position: absolute;
+  width: 403px;
+  height: 235px;
+  top: 445px;
+  left: 108px;
+}
+
+.netflix-style .overlap {
+  position: relative;
+  height: 235px;
+}
+
+.netflix-style .pasted {
+  position: absolute;
+  width: 132px;
+  height: 62px;
+  top: 0;
+  left: 152px;
+  overflow: hidden;
+}
+
+.netflix-style .overlap-group-2 {
+  position: absolute;
+  width: 63px;
+  height: 31px;
+  top: 0;
+  left: 0;
+  background-image: url(./img/group-5.png);
+  background-size: 100% 100%;
+}
+
+.netflix-style .overlap-2 {
+  position: absolute;
+  width: 29px;
+  height: 31px;
+  top: 0;
+  left: 0;
+  background-image: url(./img/vector-3.svg);
+  background-size: 100% 100%;
+}
+
+.netflix-style .vector {
+  position: absolute;
+  width: 25px;
+  height: 28px;
+  top: 2px;
+  left: 2px;
+}
+
+.netflix-style .group-2 {
+  position: absolute;
+  width: 13px;
+  height: 10px;
+  top: 9px;
+  left: 8px;
+}
+
+.netflix-style .group-wrapper {
+  position: absolute;
+  width: 25px;
+  height: 27px;
+  top: 2px;
+  left: 36px;
+  background-image: url(./img/vector-2.svg);
+  background-size: 100% 100%;
+}
+
+.netflix-style .group-3 {
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  top: 7px;
+  left: 4px;
+}
+
+.netflix-style .overlap-3 {
+  position: absolute;
+  width: 63px;
+  height: 31px;
+  top: 0;
+  left: 69px;
+  background-image: url(./img/group-4.png);
+  background-size: 100% 100%;
+}
+
+.netflix-style .img-wrapper {
+  position: absolute;
+  width: 12px;
+  height: 17px;
+  top: 4px;
+  left: 8px;
+  background-image: url(./img/vector.svg);
+  background-size: 100% 100%;
+}
+
+.netflix-style .group-4 {
+  position: absolute;
+  width: 6px;
+  height: 13px;
+  top: 2px;
+  left: 3px;
+}
+
+.netflix-style .group-5 {
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  top: 6px;
+  left: 45px;
+}
+
+.netflix-style .overlap-4 {
+  position: absolute;
+  width: 131px;
+  height: 24px;
+  top: 34px;
+  left: 2px;
+}
+
+.netflix-style .line {
+  position: absolute;
+  width: 92px;
+  height: 3px;
+  top: 11px;
+  left: 19px;
+}
+
+.netflix-style .frame-2 {
+  display: flex;
+  width: 131px;
+  height: 24px;
+  align-items: flex-start;
+  gap: 10.96px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.netflix-style .ellipse {
+  background-color: #00b89c;
+  position: relative;
+  width: 23.55px;
+  height: 23.55px;
+  border-radius: 11.77px;
+  border: 2.13px solid;
+  border-color: #000000;
+}
+
+.netflix-style .ellipse-2 {
+  background-color: #fbfcb0;
+  position: relative;
+  width: 23.55px;
+  height: 23.55px;
+  border-radius: 11.77px;
+  border: 2.13px solid;
+  border-color: #000000;
+}
+
+.netflix-style .ellipse-3 {
+  background-color: #ff9881;
+  position: relative;
+  width: 23.55px;
+  height: 23.55px;
+  border-radius: 11.77px;
+  border: 2.13px solid;
+  border-color: #000000;
+}
+
+.netflix-style .ellipse-4 {
+  background-color: #ffffff;
+  position: relative;
+  width: 23.55px;
+  height: 23.55px;
+  border-radius: 11.77px;
+  border: 2.13px solid;
+  border-color: #000000;
+}
+
+.netflix-style .rectangle {
+  position: absolute;
+  width: 151px;
+  height: 3px;
+  top: 44px;
+  left: 3px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.netflix-style .image-4 {
+  width: 171px;
+  height: 222px;
+  top: 13px;
+  left: 232px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.netflix-style .image-5 {
+  width: 72px;
+  height: 19px;
+  top: 36px;
+  left: 0;
+  position: absolute;
+  object-fit: cover;
+}
