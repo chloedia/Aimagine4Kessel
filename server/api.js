@@ -14,12 +14,12 @@ const UserChoice = require("./models/userChoiceSchema");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-const corsOptions = {
-	origin: "*", // Allow all origins. Adjust this to list specific origins in production.
-	methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-	allowedHeaders: ["Content-Type", "Authorization"],
-	optionsSuccessStatus: 204,
-};
+// const corsOptions = {
+// 	origin: "*", // Allow all origins. Adjust this to list specific origins in production.
+// 	methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+// 	allowedHeaders: ["Content-Type", "Authorization"],
+// 	optionsSuccessStatus: 204,
+// };
 
 app.use(cors(corsOptions));
 app.use(cors());
