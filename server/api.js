@@ -15,7 +15,10 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 const corsOptions = {
-	origin: "*",
+	origin: [
+		"https://localhost:8080",
+		"https://aimagine-kessel-client.vercel.app",
+	],
 	methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 	allowedHeaders: ["Content-Type", "Authorization"],
 	optionsSuccessStatus: 204,
