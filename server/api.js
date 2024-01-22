@@ -14,15 +14,18 @@ const UserChoice = require("./models/userChoiceSchema");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+// CORS configuration
 const corsOptions = {
-	origin: "*", // Allow all origins. Adjust this to list specific origins in production.
+	origin: [
+		"https://localhost:8080",
+		"https://aimagine-kessel-client.vercel.app",
+	],
 	methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 	allowedHeaders: ["Content-Type", "Authorization"],
 	optionsSuccessStatus: 204,
 };
 
 app.use(cors(corsOptions));
-app.use(cors());
 app.use(bodyParser.json());
 
 // Database Setup
@@ -40,7 +43,6 @@ db.once("open", function () {
 
 // Middleware
 app.use(express.json());
-app.use(cors(corsOptions));
 
 const verifyToken = (req, res, next) => {
 	const token = req.headers.authorization?.split(" ")[1]; // Extract token from header
