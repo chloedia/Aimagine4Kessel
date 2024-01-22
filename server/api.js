@@ -14,6 +14,7 @@ const UserChoice = require("./models/userChoiceSchema");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+// CORS configuration
 const corsOptions = {
 	origin: [
 		"https://localhost:8080",
@@ -25,7 +26,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.use(cors());
 app.use(bodyParser.json());
 
 // Database Setup
@@ -43,7 +43,6 @@ db.once("open", function () {
 
 // Middleware
 app.use(express.json());
-app.use(cors(corsOptions));
 
 const verifyToken = (req, res, next) => {
 	const token = req.headers.authorization?.split(" ")[1]; // Extract token from header
