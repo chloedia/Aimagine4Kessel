@@ -13,7 +13,7 @@ async function checkTokenValidity() {
 
 	try {
 		const response = await fetch(
-			"http://localhost:8080/api/auth/validate",
+			"https://aimagine-kessel-697qb496u-chloedia.vercel.app/api/auth/validate",
 			{
 				headers: {
 					Authorization: `Bearer ${token}`,
@@ -126,7 +126,7 @@ export default function VisualSelection() {
 			try {
 				const token = localStorage.getItem("token");
 				const response = await fetch(
-					"http://localhost:8080/api/campaigns",
+					"https://aimagine-kessel-697qb496u-chloedia.vercel.app/api/campaigns",
 					{
 						headers: {
 							Authorization: `Bearer ${token}`,
@@ -162,7 +162,7 @@ export default function VisualSelection() {
 			if (token) {
 				try {
 					const response = await fetch(
-						"http://localhost:8080/api/current-user",
+						"https://aimagine-kessel-697qb496u-chloedia.vercel.app/api/current-user",
 						{
 							headers: { Authorization: `Bearer ${token}` },
 						}
@@ -257,7 +257,7 @@ export default function VisualSelection() {
 					Object.entries(selections).map(
 						async ([campaignID, { visual, trackedUrl }]) => {
 							await fetch(
-								"http://localhost:8080/api/user-choice",
+								"https://aimagine-kessel-697qb496u-chloedia.vercel.app/api/user-choice",
 								{
 									method: "POST",
 									headers: {
