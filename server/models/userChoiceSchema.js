@@ -8,6 +8,7 @@ const UserChoiceSchema = new mongoose.Schema({
 	},
 	campaignId: { type: String, required: true },
 	visualId: { type: String, required: true },
+	tracked_link: { type: String, required: false },
 });
 
 // Create a compound index

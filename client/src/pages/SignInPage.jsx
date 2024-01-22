@@ -21,7 +21,7 @@ const SignIn = () => {
 		const fetchUserIDs = async () => {
 			try {
 				const response = await fetch(
-					"https://aimagine-kessel.vercel.app/api/users"
+					"http://localhost:8080/api/users"
 				);
 				const data = await response.json();
 				if (response.ok) {
@@ -48,7 +48,7 @@ const SignIn = () => {
 	const handleLogin = async () => {
 		try {
 			const response = await fetch(
-				"https://aimagine-kessel.vercel.app/api/login",
+				"http://localhost:8080/api/login",
 				{
 					method: "POST",
 					headers: {

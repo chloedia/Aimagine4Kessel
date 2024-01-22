@@ -17,6 +17,10 @@ body,
 .visualContainer.selected {
 	border: 1px solid rgba(56, 57, 61, 1);
 }
+
+.visualContainer.personalized {
+	background-color: rgba(0, 255, 0, 0.2);
+}
 iframe {
 	margin-bottom: 25px;
 	border: 1px solid rgba(56, 57, 61, 0.1);

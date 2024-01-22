@@ -3,7 +3,11 @@ const bcryptjs = require("bcryptjs");
 
 const UserSchema = new mongoose.Schema({
 	newsLetterId: String,
-	password: String, // Store hashed passwords only
+	password: String,
+	currentCampaigns: [
+		{ type: mongoose.Schema.Types.ObjectId, ref: "Campaign" },
+	],
+	pastCampaigns: [{ type: mongoose.Schema.Types.ObjectId, ref: "Campaign" }],
 });
 
 // Hash password before saving

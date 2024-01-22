@@ -72,12 +72,16 @@ app.post("/api/login", async (req, res) => {
 		const { newsLetterId, password } = req.body;
 		// Find the user by newsLetterId
 		const user = await User.findOne({ newsLetterId });
+		console.log(user);
+		console.log(password);
+
 		if (!user) {
 			return res.status(401).json({ error: "Invalid credentials" });
 		}
 		// Compare provided password with the stored hash
 		const isMatch = await bcryptjs.compare(password, user.password);
 		if (!isMatch) {
+			console.log("pas le bon mdp");
 			return res.status(401).json({ error: "Invalid credentials" });
 		}
 
@@ -93,7 +97,7 @@ app.post("/api/login", async (req, res) => {
 		const token = jwt.sign(payload, process.env.JWT_SECRET, {
 			expiresIn: "2h", // Token expires in 1 hour
 		});
-
+		console.log("connecté");
 		res.json({ message: "Login successful", token });
 	} catch (err) {
 		console.error(err);
@@ -122,10 +126,44 @@ app.get("/api/users", async (req, res) => {
 	}
 });
 
-app.get("/api/campaigns", async (req, res) => {
+app.get("/api/campaigns", verifyToken, async (req, res) => {
 	try {
-		const campaigns = await Campaign.find({}).lean(); // Use .lean() for faster reads when you just need plain JSON objects
-		res.json(campaigns);
+		const userId = req.user.userId;
+		console.log(userId);
+		const user = await User.findById(userId).populate({
+			path: "currentCampaigns",
+			populate: {
+				path: "visuals",
+				select: "id description status personalized_for dim src",
+			},
+		});
+
+		if (!user) {
+			return res.status(404).json({ error: "User not found" });
+		}
+
+		const currentCampaigns = user.currentCampaigns.map((campaign) => {
+			const personalizedVisuals = campaign.visuals.filter((visual) => {
+				return (
+					visual.status === "personalized" &&
+					String(visual.personalized_for) === String(userId)
+				);
+			});
+
+			const agnosticVisuals = campaign.visuals.filter((visual) => {
+				return visual.status === "agnostic";
+			});
+
+			return {
+				name: campaign.name,
+				logo_url: campaign.logo_url,
+				description: campaign.description,
+				personalized_visuals: personalizedVisuals,
+				agnostic_visuals: agnosticVisuals,
+			};
+		});
+		console.log(currentCampaigns);
+		res.json(currentCampaigns);
 	} catch (err) {
 		console.error("Error fetching campaigns:", err);
 		res.status(500).json({ error: "Internal server error" });
