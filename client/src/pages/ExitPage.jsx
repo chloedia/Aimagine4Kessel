@@ -51,7 +51,6 @@ export default function ExitPage() {
 					);
 					const data = await response.json();
 					if (response.ok) {
-						console.log(data);
 						setCurrentUser(data);
 					} else {
 						console.error("Failed to fetch user data:", data.error);
@@ -73,7 +72,7 @@ export default function ExitPage() {
 	return (
 		<>
 			<div className="header">
-				<img className="logo" alt="logo" src="/img/logo.png" />
+				<img className="logo" alt="logo" src="/logo.png" />
 				<div className="user">
 					{currentUser ? currentUser.newsLetterId : ""}
 				</div>

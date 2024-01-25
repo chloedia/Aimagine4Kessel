@@ -77,11 +77,11 @@ const SignIn = () => {
 	return (
 		<>
 			<div className="header">
-				<img className="logo" alt="logo" src="/img/logo.png" />
+				<img className="logo" alt="logo" src="/logo.png" />
 			</div>
 			<div className="content">
 				<div className="form-container">
-					<div className="form">
+					<form className="form">
 						<h1>Connectez-vous</h1>
 						<hr />
 						<div className="form-elmt">
@@ -108,6 +108,7 @@ const SignIn = () => {
 								id="code"
 								type="password"
 								placeholder="Code"
+								autoComplete="current-password"
 								value={password}
 								onChange={(e) => setPassword(e.target.value)}
 							/>
@@ -117,7 +118,7 @@ const SignIn = () => {
 								</div>
 							)}
 						</div>
-					</div>
+					</form>
 				</div>
 				<div className="info-container">
 					<img

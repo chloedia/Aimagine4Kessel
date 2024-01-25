@@ -72,8 +72,6 @@ app.post("/api/login", async (req, res) => {
 		const { newsLetterId, password } = req.body;
 		// Find the user by newsLetterId
 		const user = await User.findOne({ newsLetterId });
-		console.log(user);
-		console.log(password);
 
 		if (!user) {
 			return res.status(401).json({ error: "Invalid credentials" });
@@ -81,7 +79,6 @@ app.post("/api/login", async (req, res) => {
 		// Compare provided password with the stored hash
 		const isMatch = await bcryptjs.compare(password, user.password);
 		if (!isMatch) {
-			console.log("pas le bon mdp");
 			return res.status(401).json({ error: "Invalid credentials" });
 		}
 
@@ -97,7 +94,6 @@ app.post("/api/login", async (req, res) => {
 		const token = jwt.sign(payload, process.env.JWT_SECRET, {
 			expiresIn: "2h", // Token expires in 1 hour
 		});
-		console.log("connecté");
 		res.json({ message: "Login successful", token });
 	} catch (err) {
 		console.error(err);
@@ -129,7 +125,6 @@ app.get("/api/users", async (req, res) => {
 app.get("/api/campaigns", verifyToken, async (req, res) => {
 	try {
 		const userId = req.user.userId;
-		console.log(userId);
 		const user = await User.findById(userId).populate({
 			path: "currentCampaigns",
 			populate: {
@@ -162,7 +157,6 @@ app.get("/api/campaigns", verifyToken, async (req, res) => {
 				agnostic_visuals: agnosticVisuals,
 			};
 		});
-		console.log(currentCampaigns);
 		res.json(currentCampaigns);
 	} catch (err) {
 		console.error("Error fetching campaigns:", err);

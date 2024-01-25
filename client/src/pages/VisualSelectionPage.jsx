@@ -51,7 +51,6 @@ function Campaign({
 
 			const htmlCode = await response.text();
 			await navigator.clipboard.writeText(htmlCode);
-			console.log("HTML code copied to clipboard:", htmlCode);
 		} catch (error) {
 			console.error("Error fetching or copying HTML code:", error);
 		}
@@ -136,7 +135,6 @@ export default function VisualSelection() {
 				const data = await response.json();
 				if (response.ok) {
 					setCampaigns(data);
-					console.log(data);
 					const campaignNames = data.map((data) => data.name);
 					setSteps([...campaignNames, "Valider"]);
 
@@ -169,7 +167,6 @@ export default function VisualSelection() {
 					);
 					const data = await response.json();
 					if (response.ok) {
-						console.log(data);
 						setCurrentUser(data);
 					} else {
 						console.error("Failed to fetch user data:", data.error);
@@ -197,7 +194,6 @@ export default function VisualSelection() {
 			},
 		});
 
-		console.log("Selections : ", selections);
 	};
 	const handleSelectVisual = (visualId) => {
 		// Find the current campaign
@@ -233,7 +229,6 @@ export default function VisualSelection() {
 			},
 		});
 
-		console.log("Selections : ", selections);
 	};
 
 	const handleLogOut = () => {
@@ -286,7 +281,7 @@ export default function VisualSelection() {
 	return (
 		<>
 			<div className="header">
-				<img className="logo" alt="logo" src="/img/logo.png" />
+				<img className="logo" alt="logo" src="/logo.png" />
 				<div className="user">
 					{currentUser ? currentUser.newsLetterId : ""}
 				</div>
